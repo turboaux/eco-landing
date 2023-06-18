@@ -1,5 +1,8 @@
 <article class="product">
-    <img [src]="featureImage" alt="name" class="product__featureImage">
+    <div class="product__image-container">
+        <img [src]="featureImage" alt="name" class="product__featureImage">
+    </div>
+
     <p class="product__name">{{ name }}</p>
     <ng-content select="app-calories-meter"></ng-content>
 </article>
