@@ -1,0 +1,54 @@
+.auth-navbar {
+    padding: 1rem 0;
+
+    &__avatar {
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__username {
+        font-size: .8rem;
+    }
+}
+
+.navbar {
+    padding: 2rem 0;
+
+    &__logo {
+        display: inline-block;
+        width: 10rem;
+    }
+
+    &__logo-img {
+        width: 10rem;
+    }
+
+    &__items {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    &__link-text:link,
+    &__link-text:visited {
+        color: var(--primary-color); 
+        font-weight: 600;
+    }
+
+    &__link-text:hover,
+    &__link-text:active {
+        opacity: 0.8;
+    }
+
+    &__link-icon {
+        display: inline-block;
+        width: 1.5rem;
+    }
+
+    &__feature-icon {
+        width: 1.5rem;
+    }
+}

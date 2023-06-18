@@ -1,0 +1,37 @@
+.footer {
+    padding: 2rem 0;
+
+    &__items {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    &__items--menu {
+        gap: 5rem;
+    }
+
+    &__items--social {
+        gap: 1.5rem;
+    }
+
+    &__link-text:link,
+    &__link-text:visited {
+        text-transform: uppercase;
+        color: var(--primary-color); 
+    }
+
+    &__link-text:hover,
+    &__link-text:active {
+        opacity: 0.8;
+    }
+
+    &__link-icon {
+        display: inline-block;
+        width: auto;
+    }
+
+    &__social-icon {
+        width: auto;
+    }
+}
