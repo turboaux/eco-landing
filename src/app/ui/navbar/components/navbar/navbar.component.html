@@ -1,8 +1,14 @@
 <header>
     <div class="auth-navbar bg-primary">
         <div class="container flex justify-content-end align-items-center gap-2">
-            <img class="auth-navbar__avatar" src="https://fastly.picsum.photos/id/1/200/300.jpg?hmac=jH5bDkLr6Tgy3oAg5khKCHeunZMHq0ehBZr6vGifPLY" alt="">
-            <span class="auth-navbar__username">Javier Uribe</span>
+            <ng-container *ngIf="userAvatar && userName; else loadingUserInfo">
+                <img class="auth-navbar__avatar" [src]="userAvatar" [alt]="userName">
+                <span class="auth-navbar__username">{{ userName }}</span>
+            </ng-container>
+
+            <ng-template #loadingUserInfo>
+                <i class="pi pi-spin pi-spinner" style="font-size: 1rem"></i>
+            </ng-template>
         </div>
     </div>
 
