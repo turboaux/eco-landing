@@ -1,0 +1,36 @@
+.hero {
+
+    &__img {
+        background-image: url('../../../../assets/images/hero-background.png');
+        min-height: 400px;
+        height: 60vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__title {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+
+    &__slogan {
+        color: var(--primary-color);
+        margin-bottom: 2.5rem;
+    }
+
+    &__cta {
+        display: inline-block;
+        background-color: transparent;
+        border: 1px solid var(--primary-color);
+        padding: 1em 1.5em;
+        color: var(--primary-color);
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    &__cta:hover {
+        background-color: var(--primary-color); 
+        color: var(--primary-color-text);
+    }
+}
