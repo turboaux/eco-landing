@@ -1,0 +1,28 @@
+:host {
+    --bar-width: 0;
+    display: block;
+}
+
+.calories-meter {
+    height: 1.5rem;
+    border: 1px solid var(--primary-color);
+    position: relative;
+    padding: 10px;
+    margin-bottom: .5rem;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: var(--bar-width);
+        height: 10px;
+        top: 50%;
+        transform: translatey(-50%);
+        background-color: var(--blue-100);
+    }
+}
+
+.calories-ratio {
+    text-align: center;
+    color: var(--primary-color);
+}
