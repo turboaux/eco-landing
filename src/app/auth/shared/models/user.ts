@@ -5,7 +5,7 @@ export class User {
         public avatar: string
     ) {}
 
-    static adapt(entry: any) {
+    static adapt(entry: any): User {
 
         return new User(
             entry.fields.name,

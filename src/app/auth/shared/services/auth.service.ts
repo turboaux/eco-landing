@@ -23,7 +23,6 @@ export class AuthService {
 
     return from(this.client.getEntry(id))
       .pipe(
-        tap((entry) => console.log(entry)),
         map((entry) => User.adapt(entry))
       );
   }
