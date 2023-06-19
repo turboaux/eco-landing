@@ -1,14 +1,12 @@
 .product {
     
-    &__image-container {
-        min-height: 20rem;
-        margin-bottom: .5rem;
-    }
-
     &__featureImage {
-        display: inline-block;
-        max-width: 100%;
-        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+        background-position: center;
+        min-height: 240px;
+        height: 20rem;
+        margin-bottom: .5rem;
     }
 
     &__name {
