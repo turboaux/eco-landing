@@ -6,10 +6,12 @@ import { ProductCardModule } from '@ui/product-card/product-card.module';
 import { CaloriesMeterModule } from '@ui/calories-meter/calories-meter.module';
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductListPageComponent } from './pages/product-list-page/product-list-page.component';
+import { ProductSinglePageComponent } from './pages/product-single-page/product-single-page.component';
 
 @NgModule({
   declarations: [
-    ProductListPageComponent
+    ProductListPageComponent,
+    ProductSinglePageComponent
   ],
   imports: [
     CommonModule,
