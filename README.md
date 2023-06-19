@@ -39,7 +39,8 @@ El *frontend* del proyecto fue implementado utilizando las siguientes herramient
 * Contentful 10.2.4
 * Subskink 1.0.2
 
-Para el CSS del proyecto se utilizó SASS y un enfoque orientado a BEM para el nombre de las clases CSS. 
+Para el CSS del proyecto se utilizó SASS y un enfoque orientado a BEM para el nombre de las clases CSS.
+Por ahora el proyecto solo esta optimizado para pantallas Desktop y algunas Tablets.
 
 El backend del proyecto fue implementado utilizando el popular CMS Headless Contentful. 
 
