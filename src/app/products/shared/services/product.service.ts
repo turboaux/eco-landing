@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Observable, from } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { createClient } from 'contentful';
 import { environment } from '@env/environment';
 
 import { Product } from '../models/product';
+import { ProductDetail } from '../models/product-detail';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,14 @@ export class ProductService {
   });
 
   constructor() {}
+
+  get(id: string) {
+
+    return from(this.client.getEntry(id))
+      .pipe(
+        map((entry) => ProductDetail.adapt(entry))
+      );
+  }
 
   search(criteria: string): Observable<Product[]> {
 

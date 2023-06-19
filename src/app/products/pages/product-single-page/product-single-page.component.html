@@ -1,1 +1,40 @@
-<p>product-single-page works!</p>
+<ng-container *ngIf="product$ | async as product">
+    <div class="container py-7">
+        <button class="back-button" (click)="goBack()">
+            <img src="assets/icons/icon-back-arrow.png" alt="Icono de regresar a la anterior página">
+        </button>
+    </div>
+
+    <section>
+        <div class="container product-info">
+            <div>
+                <app-product-card [name]="product.name" [featureImage]="product.featureImage" />
+                <p class="product-info__description">{{ product.description }}</p>
+            </div>
+
+            <div>
+                <div class="product-info__nutrition">
+                    <div>
+                        <img class="product-info__serving-size-icon" src="assets/icons/icon-serving-size.png" [alt]="product.servingSize">
+                        <p class="product-info__serving-size">{{ product.servingSize }} mg</p>
+                    </div>
+                    <span class="product-info__total">Grasas <br/> {{ product.totalFat }} g</span>
+                    <div class="product-info__calories">
+                        <app-calories-meter [consumed]="product.calories" [threshold]="100" />
+                    </div>
+                    <span class="product-info__total">HC <br/> {{ product.totalCarbohydrate }} g</span>
+                </div>
+
+                <article class="product-info__ingredients">
+                    <p class="mb-3">Ingredientes:</p>
+                    <p>{{ product.ingredients }}</p>
+                </article>
+            </div>
+
+            <div class="product-info__ecological">
+                <span class="product-info__footprint">Ecological <br/> footprint</span>
+                <p class="product-info__score"><span>{{ product.ecologicalFootprint }}</span>Ecological footprint</p>
+            </div>
+        </div>
+    </section>
+</ng-container>
