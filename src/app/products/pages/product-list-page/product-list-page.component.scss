@@ -1,0 +1,18 @@
+:host {
+    display: block;
+    min-height: 100vh;
+    background-color: var(--gray-100);
+}
+
+:host ::ng-deep {
+    input {
+        background-color: var(--gray-100);
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+    }
+
+    .p-input-icon-left > .p-icon-wrapper.p-icon, .p-input-icon-left > i:first-of-type {
+        color: var(--primary-color);
+        font-weight: 500;
+    }
+}
